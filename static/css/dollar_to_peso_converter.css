@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+header{
+    background-color: rgb(64, 64, 255);
+}
+
+header .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header .container .logo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header .container .logo img{
+    height: 140px;
+}
+
+header .container .logo h2{
+    color: white;
+    font-size: 50px;
+}
+
+hr{
+    padding: 1px 186px;
+    margin: 5px;
+}
+
+header .container nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+header .container nav a{
+    text-decoration: none;
+    color: rgb(64, 64, 255);
+    background-color: white;
+    margin: 10px;
+    border-radius: 24px;
+    padding: 10px;
+}
+
+header .container nav a:hover{
+    transform: translateY(-5%);
+    transition: 400ms;
+    cursor: pointer;
+    box-shadow: 0px 10px 0px 0px rgba(0, 0, 0, 0.160);
+    padding: 15px;
+}
+
+section .container form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section .container form input{
+    border-radius: 24px;
+    border: 3px solid rgb(64, 64, 255);
+    margin: 35px;
+    padding: 15px;
+}
+
+section .container form input::placeholder{
+    text-align: center;
+    font-size: 25px;
+}
+
+section .container form button{
+    border: none;
+    background-color: rgb(64, 64, 255);
+    color: white;
+    border-radius: 24px;
+    padding: 15px;
+    font-size: 25px;
+    margin: 25px;
+}
+
+@media (min-width:850px){
+    header .container{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    header .container .logo{
+        flex-direction: row;
+    }
+
+    header .container nav{
+        flex-direction: row;
+    }
+
+    section .container form{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin: 100px;
+    }
+}

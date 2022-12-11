@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/index.css')}}">
+    <link rel="shortcut icon" href="{{url_for('static', filename='img/favicon.png')}}" type="image/x-icon">
+    <title>DolarBlueHoy</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="{{url_for('static', filename='img/icon.png')}}" alt="logo">
+                <h2>DolarBlueHoy</h2>
+            </div>
+            <nav>
+                <a href="/">Inicio</a>
+                <a href="dollar_to_peso_converter.html">Convertidor dolar a peso</a>
+                <a href="peso_to_dollar_converter.html">Convertidor peso a dolar</a>
+            </nav>
+        </div>
+    </header>
+    <section>
+        <div class="container">
+            <div class="price-frame">
+                <div class="buy-price-frame">
+                    <h3>Compra</h3>
+                    <p>${{blue_dollar_purchase}}</p>
+                </div>
+                <div class="sale-price-frame">
+                    <h3>Venta</h3>
+                    <p>${{blue_dollar_sales}}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

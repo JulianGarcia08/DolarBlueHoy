@@ -1,0 +1,148 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+header{
+    background-color: rgb(64, 64, 255);
+}
+
+header .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header .container .logo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header .container .logo img{
+    height: 140px;
+}
+
+header .container .logo h2{
+    color: white;
+    font-size: 50px;
+}
+
+hr{
+    padding: 1px 186px;
+    margin: 5px;
+}
+
+header .container nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+header .container nav a{
+    text-decoration: none;
+    color: rgb(64, 64, 255);
+    background-color: white;
+    margin: 10px;
+    border-radius: 24px;
+    padding: 10px;
+}
+
+header .container nav a:hover{
+    transform: translateY(-5%);
+    transition: 400ms;
+    cursor: pointer;
+    box-shadow: 0px 10px 0px 0px rgba(0, 0, 0, 0.160);
+    padding: 15px;
+}
+
+section .container .price-frame{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 25px;
+}
+
+section .container .buy-price-frame{
+    background-color: rgb(64, 64, 255);
+    border-radius: 24px;
+    padding: 15px 65px;
+    width: 300px;
+    margin: 10px;
+}
+
+section .container .buy-price-frame h3,p{
+    background-color: white;
+    color: rgb(64, 64, 255);
+    border-radius: 24px;
+    margin: 10px;
+    text-align: center;
+    padding: 10px;
+}
+
+section .container .sale-price-frame{
+    background-color: rgb(64, 64, 255);
+    border-radius: 24px;
+    padding: 15px 65px;
+    width: 300px;
+    margin: 10px;
+}
+
+section .container .sale-price-frame h3,p{
+    background-color: white;
+    color: rgb(64, 64, 255);
+    border-radius: 24px;
+    margin: 10px;
+    text-align: center;
+    padding: 10px;
+}
+
+@media (min-width:450px){
+    hr{display: none;}
+}
+
+@media (min-width:850px){
+    header .container{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    header .container .logo{
+        flex-direction: row;
+    }
+
+    header .container nav{
+        flex-direction: row;
+    }
+
+    section .container .price-frame{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    section .container .buy-price-frame{
+        width: 500px;
+    }
+
+    section .container .buy-price-frame h3,p{
+        font-size: 65px;
+    }
+
+    section .container .sale-price-frame{
+        width: 500px;
+    }
+
+    section .container .sale-price-frame h3,p{
+        font-size: 65px;
+    }
+}
