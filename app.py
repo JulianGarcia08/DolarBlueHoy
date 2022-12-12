@@ -56,7 +56,7 @@ def peso_to_dollar_converter():
         peso_x = float(peso)
         result = peso_x / blue_dollar_sales
         
-        return render_template("dollar_to_peso_converter.html", result=result, peso=peso)
+        return render_template("peso_to_dollar_converter.html", result=result, peso=peso)
 
     return render_template("peso_to_dollar_converter.html")
 
