@@ -30,9 +30,12 @@ for b_d_s in re.findall(r'-?\d+\.?\d*', b_d_sales):
 
 blue_dollar_sales = b_d_s
 
+# Intermediate Price
+intermediate_price = (blue_dollar_purchase + blue_dollar_sales) / 2
+
 @app.route('/')
 def index():
-    return render_template("index.html", blue_dollar_sales=blue_dollar_sales, blue_dollar_purchase=blue_dollar_purchase)
+    return render_template("index.html", blue_dollar_sales=blue_dollar_sales, blue_dollar_purchase=blue_dollar_purchase, intermediate_price=intermediate_price)
 
 @app.route('/dollar_to_peso_converter.html', methods=['GET', 'POST'])
 def dollar_to_peso_converter():
