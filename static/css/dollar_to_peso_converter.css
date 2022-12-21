@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -5,7 +7,7 @@
 }
 
 body{
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 header{
@@ -54,7 +56,9 @@ header .container nav a{
     background-color: white;
     margin: 10px;
     border-radius: 24px;
-    padding: 10px;
+    padding: 8px;
+    font-size: 1.2rem;
+    font-weight: bold;
 }
 
 header .container nav a:hover{
@@ -98,7 +102,7 @@ section .container form button{
 @media (min-width:850px){
     header .container{
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: space-around;
     }
 
     header .container .logo{
@@ -107,6 +111,7 @@ section .container form button{
 
     header .container nav{
         flex-direction: row;
+        margin: 0;
     }
 
     section .container form{

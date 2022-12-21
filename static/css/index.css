@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -5,7 +7,7 @@
 }
 
 body{
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 header{
@@ -27,12 +29,12 @@ header .container .logo{
 }
 
 header .container .logo img{
-    height: 120px;
+    height: 140px;
 }
 
 header .container .logo h2{
     color: white;
-    font-size: 40px;
+    font-size: 50px;
 }
 
 header .container nav{
@@ -50,6 +52,8 @@ header .container nav a{
     margin: 10px;
     border-radius: 24px;
     padding: 8px;
+    font-size: 1.2rem;
+    font-weight: bold;
 }
 
 header .container nav a:hover{
@@ -124,7 +128,7 @@ section .container .sale-price-frame h3,p{
 @media (min-width:850px){
     header .container{
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: space-around;
     }
 
     header .container .logo{
@@ -133,6 +137,7 @@ section .container .sale-price-frame h3,p{
 
     header .container nav{
         flex-direction: row;
+        margin: 0;
     }
 
     section .container .price-frame{
