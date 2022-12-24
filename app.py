@@ -1,37 +1,15 @@
 from flask import Flask, render_template, request, send_file
-from bs4 import BeautifulSoup
 import requests
-import re
 
 app = Flask(__name__)
 
-# Extracting the data from the website
-url = 'https://dolarhoy.com/'
-page = requests.get(url)
-soup = BeautifulSoup(page.content, 'html.parser')
+blueDollar = requests.get('https://api.bluelytics.com.ar/v2/latest').json()['blue']
 
-# Blue Dollar Purchase Price
-bd_purchase = soup.find_all('div', class_='compra')
+blue_dollar_purchase = blueDollar.get('value_buy')
 
-b_d_purchase = bd_purchase[0].text
+blue_dollar_sales = blueDollar.get('value_sell')
 
-for b_d_p in re.findall(r'-?\d+\.?\d*', b_d_purchase):
-    b_d_p = float(b_d_p)
-
-blue_dollar_purchase = b_d_p
-
-# Blue Dollar Sales Price
-bd_sales = soup.find_all('div', class_='venta')
-
-b_d_sales = bd_sales[0].text
-
-for b_d_s in re.findall(r'-?\d+\.?\d*', b_d_sales):
-    b_d_s = float(b_d_s)
-
-blue_dollar_sales = b_d_s
-
-# Intermediate Price
-intermediate_price = (blue_dollar_purchase + blue_dollar_sales) / 2
+intermediate_price = blueDollar.get('value_buy')
 
 @app.route('/')
 def index():
@@ -58,7 +36,7 @@ def peso_to_dollar_converter():
 
         peso_x = float(peso)
         result = peso_x / blue_dollar_sales
-        
+
         return render_template("peso_to_dollar_converter.html", result=result, peso=peso)
 
     return render_template("peso_to_dollar_converter.html")
