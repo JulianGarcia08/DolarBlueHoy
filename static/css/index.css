@@ -12,6 +12,7 @@ body{
 
 header{
     background-color: rgb(64, 64, 255);
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
 }
 
 header .container{
@@ -121,6 +122,42 @@ section .container .sale-price-frame h3,p{
     padding: 8px;
 }
 
+.programa-de-escritorio{
+    display: none;
+}
+
+.programa-de-escritorio .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.programa-de-escritorio .container h1{
+    font-size: 2em;
+    text-align: center;
+    font-weight: bold;
+    color: rgb(64, 64, 255);
+}
+
+.programa-de-escritorio .container p{
+    font-size: 1.2em;
+    text-align: center;
+    font-weight: bold;
+    color: rgb(64, 64, 255);
+}
+
+.programa-de-escritorio .container button{
+    border: none;
+    color: white;
+    background-color: rgb(64, 64, 255);
+    margin: 10px;
+    border-radius: 24px;
+    padding: 8px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
 @media (min-width:450px){
     hr{display: none;}
 }
@@ -162,5 +199,28 @@ section .container .sale-price-frame h3,p{
 
     section .container .sale-price-frame h3,p{
         font-size: 35px;
+    }
+
+    hr{
+        color: rgb(64, 64, 255);
+    }
+
+    .programa-de-escritorio{
+        display: block;
+    }
+
+    .programa-de-escritorio .container h1{
+        font-size: 4em;
+        margin-top: 7rem;
+    }
+    
+    .programa-de-escritorio .container p{
+        font-size: 2em;
+        margin-top: 1.5rem;
+    }
+    
+    .programa-de-escritorio .container button{
+        font-size: 2.2rem;
+        margin-top: 1.5rem;
     }
 }

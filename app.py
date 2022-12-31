@@ -9,7 +9,7 @@ blue_dollar_purchase = blueDollar.get('value_buy')
 
 blue_dollar_sales = blueDollar.get('value_sell')
 
-intermediate_price = blueDollar.get('value_buy')
+intermediate_price = blueDollar.get('value_avg')
 
 @app.route('/')
 def index():
