@@ -11,9 +11,11 @@ blue_dollar_sales = blueDollar.get('value_sell')
 
 intermediate_price = blueDollar.get('value_avg')
 
+day_of_this_price = requests.get('https://api.bluelytics.com.ar/v2/latest').json()['last_update']
+
 @app.route('/')
 def index():
-    return render_template("index.html", blue_dollar_sales=blue_dollar_sales, blue_dollar_purchase=blue_dollar_purchase, intermediate_price=intermediate_price)
+    return render_template("index.html", blue_dollar_sales=blue_dollar_sales, blue_dollar_purchase=blue_dollar_purchase, intermediate_price=intermediate_price, day_of_this_price=day_of_this_price)
 
 @app.route('/dollar_to_peso_converter.html', methods=['GET', 'POST'])
 def dollar_to_peso_converter():
@@ -42,4 +44,4 @@ def peso_to_dollar_converter():
     return render_template("peso_to_dollar_converter.html")
 
 if __name__=="__main__":
-    app.run(debug=True)
+    app.run(debug=False)

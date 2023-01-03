@@ -122,6 +122,10 @@ section .container .sale-price-frame h3,p{
     padding: 8px;
 }
 
+.date{
+    font-size: 1.5em;
+}
+
 .programa-de-escritorio{
     display: none;
 }
@@ -158,10 +162,6 @@ section .container .sale-price-frame h3,p{
     font-weight: bold;
 }
 
-@media (min-width:450px){
-    hr{display: none;}
-}
-
 @media (min-width:850px){
     header .container{
         flex-direction: row;
@@ -177,12 +177,17 @@ section .container .sale-price-frame h3,p{
         margin: 0;
     }
 
+    .date{
+        margin-top: 2.5rem;
+        font-size: 1.8em;
+    }
+
     section .container .price-frame{
         display: flex;
         flex-direction: row;
         justify-content: space-around;
         align-items: center;
-        margin-top: 100px;
+        margin-top: 50px;
     }
 
     section .container .buy-price-frame{
