@@ -82,6 +82,7 @@ section .container form input{
     padding: 15px;
     text-align: center;
     font-size: 25px;
+    width: 15rem;
 }
 
 section .container form input::placeholder{
