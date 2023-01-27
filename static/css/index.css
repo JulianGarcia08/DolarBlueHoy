@@ -55,6 +55,7 @@ header .container nav a{
     padding: 8px;
     font-size: 1.2rem;
     font-weight: bold;
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
 }
 
 header .container nav a:hover{
@@ -77,6 +78,7 @@ section .container .buy-price-frame{
     padding: 10px 65px;
     width: 300px;
     margin: 10px;
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
 }
 
 section .container .buy-price-frame h3,p{
@@ -94,6 +96,7 @@ section .container .intermediate-price-frame{
     padding: 10px 65px;
     width: 300px;
     margin: 10px;
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
 }
 
 section .container .intermediate-price-frame h3,p{
@@ -111,6 +114,7 @@ section .container .sale-price-frame{
     padding: 10px 65px;
     width: 300px;
     margin: 8px;
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
 }
 
 section .container .sale-price-frame h3,p{
